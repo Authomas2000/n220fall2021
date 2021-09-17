@@ -1,6 +1,5 @@
-function setup (){
-    createCanvas(300,300)
-}
+let B = 40
+let M = 150
 
 function setup (){
     createCanvas(300,300)
@@ -9,12 +8,27 @@ function setup (){
 function draw() {
     background(100);
 
-    noFill();
+    fill("#f7f2d2")
 
     //For Loop
-    for(var i = 0; i < 10; i++) {
-        for(var bottom = 0; bottom < 12; bottom++){
-            rect(bottom*10, bottom*10, 10, 10);
+    for(var i = 0; i < 11; i++) { 
+        if(i<=3){
+            B = B + 20
+            console.log(B)
+        }else if (i <= 6){
+            B = B - 20
+            M = 130
+        }else if (i == 7){
+            B = 60
+            M = 110
+        }else if (i == 8){
+            B = 80
+            M = 110
+        }else if (i == 9){
+            B = 60
+            M = 90
         }
+
+        rect(B, M, 20, 20);
     }
 }
