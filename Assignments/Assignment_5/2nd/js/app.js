@@ -11,3 +11,4 @@ function change_to_blue() {
 function change_to_black() {
     Div1.style.backgroundColor = "#000000";
 }
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #stats {
+            display: flex;
+            width: 700px;
+            justify-content: space-between;
+        }
+
+        .enemy {
+            border: 1px solid;
+            border-radius: 5px;
+            margin: 2px;
+        }
+
+
+
+        .IMG {
+            width: 256px;
+            height: 478.25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="stats">
+        <div id="enemyStats"><h1>Zombie!</h1></div>
+        <div id="characterStats"><h1>Braveman!</h1></div>
+    </div>
+    <H2 id="attackBox" onclick="attack()">Attack!</H2>
+    <div id="enemyimg"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
