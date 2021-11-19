@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Divs {
+            float: left;
+            margin: 5px;
+        }
+
+        .square {
+            float: left;
+            margin: 5px;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Divs" data-response="Div">
+        <div class="square" onclick = "ChangeColor(event)" id="Div1"></div>
+        <div class="square" onclick = "ChangeColor(event)" id="Div2"></div>
+        <div class="square" onclick = "ChangeColor(event)" id="Div3"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

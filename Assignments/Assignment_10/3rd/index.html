@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Divs {
+            float: left;
+            margin: 5px;
+        }
+
+        .colorBlock {
+            margin: 5px;
+            height: 200px;
+            width: 300px;
+            Background-color: rgb(0, 0, 0);
+        }
+
+        .buttonBlock {
+            float: left;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="colorBlock" id="Div"></div>
+    <div id = "buttons">
+        <div class="buttonBlock">Red</div>
+        <button id = "red1" onclick = "ChangeColor(event)" class="buttonBlock">+1</button>
+        <button id = "red5" onclick = "ChangeColor(event)" class="buttonBlock">+5</button>
+        <button id = "red10" onclick = "ChangeColor(event)" class="buttonBlock">+10</button>
+    </div>
+    <br>
+    <br>
+    <div id = "buttons">
+        <div class="buttonBlock">Green</div>
+        <button id = "green1" onclick = "ChangeColor(event)" class="buttonBlock">+1</button>
+        <button id = "green5" onclick = "ChangeColor(event)" class="buttonBlock">+5</button>
+        <button id = "green10" onclick = "ChangeColor(event)" class="buttonBlock">+10</button>
+    </div>
+    <br>
+    <br>
+    <div id = "buttons">
+        <div class="buttonBlock">Blue</div>
+        <button id = "blue1" onclick = "ChangeColor(event)" class="buttonBlock">+1</button>
+        <button id = "blue5" onclick = "ChangeColor(event)" class="buttonBlock">+5</button>
+        <button id = "blue10" onclick = "ChangeColor(event)" class="buttonBlock">+10</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
