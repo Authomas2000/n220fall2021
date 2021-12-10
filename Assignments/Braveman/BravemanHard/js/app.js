@@ -6,10 +6,10 @@ function Start() {
     character.bomb = 1;//1
     character.gold = 25;//25
     character.exp = 0;//0
-    character.level = 5;//1
+    character.level = 1;//1
     character.armor = 2;//2
     character.health = 30;//30
-    character.damage = 300;//3
+    character.damage = 3;//3
     character.max = 30;//30
 
     //display character stats
