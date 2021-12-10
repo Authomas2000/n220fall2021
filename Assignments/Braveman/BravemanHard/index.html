@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .shk {
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            animation: shakeMe;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes shakeMe {
+
+            2%,
+            18% {
+                transform: translate3d(-5px, 0, 0);
+            }
+
+            4%,
+            16% {
+                transform: translate3d(5px, 0, 0);
+            }
+
+            6%,
+            10%,
+            14% {
+                transform: translate3d(-5px, 0, 0);
+            }
+
+            8%,
+            12% {
+                transform: translate3d(5px, 0, 0);
+            }
+
+            18.1% {
+                transform: translate3d(0px, 0, 0);
+            }
+        }
+
+        #stats {
+            display: flex;
+            width: 1200px;
+            justify-content: space-between;
+        }
+
+        #heroDetails {
+            border-style: solid;
+            width: 400px;
+            height: 800px;
+        }
+
+        #enemyDetails {
+            border-style: solid;
+            width: 400px;
+            height: 800px;
+        }
+
+        #enemyName {
+            margin-left: 30px;
+        }
+
+        #enemyImage {
+            margin-left: 30px;
+        }
+
+        #enemyStats {
+            margin-left: 30px;
+        }
+
+        #braveman {
+            margin-left: 120px;
+        }
+
+        #cStats {
+            display: flex;
+            width: 300px;
+            justify-content: space-between;
+            margin-left: 50px;
+        }
+
+        #mainButtons {
+            margin-left: 70px;
+        }
+
+        #cButtons {
+            margin-left: 30px;
+        }
+
+        #spawnAndAttack {
+            height: 80px;
+            width: 130px;
+            font-size: medium;
+        }
+
+        #shopAndRetreat {
+            height: 80px;
+            width: 130px;
+            font-size: medium;
+        }
+
+        #Images {
+            display: flex;
+            width: 700px;
+            justify-content: space-between;
+        }
+
+        #buttonCSS {
+            width: 80px;
+        }
+
+        #item1 {
+            width: 170px;
+            font-size: medium;
+        }
+
+        #item2 {
+            width: 170px;
+            font-size: medium;
+        }
+
+        #equipment {
+            margin-top: 40px;
+            margin-left: 30px;
+            font-size: medium;
+        }
+
+        #equipmentBlock {
+            border-style: solid;
+            width: 335px;
+            height: 400px;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 20px;
+        }
+
+        #checkQuest {
+            border-style: solid;
+            margin-top: -20px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 8em
+        }
+
+        #questBox {
+            border-style: solid;
+            width: 400px;
+            height: 500px;
+            margin-right: 30px;
+        }
+
+        #questText {
+            margin-left: 100px;
+        }
+
+        #quests {
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+
+        #eDesc {
+            border-style: solid;
+            border-top: 10px;
+            border-right: 10px;
+            border-left: 10px;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 10px;
+        }
+
+        .enemy {
+            border: 1px solid;
+            border-radius: 5px;
+            margin: 2px;
+        }
+
+        .IMG {
+            width: 330px;
+            height: 478.25px;
+        }
+
+        .enemyName {
+            width: 200px
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button id="restart" onclick="Start()">Restart</button>
+    </div>
+    <div id="stats">
+        <div id="enemyDetails">
+            <H1 id="enemyName"></H1>
+            <h3 id="enemyStats"></h3>
+            <div id="enemyImage"></div>
+        </div>
+        <div id="heroDetails">
+            <h1 id="braveman">Braveman!</h1>
+            <div id="cStats">
+                <h3 id="characterStats"></h3>
+                <h3 id="characterStats2"></h3>
+            </div>
+            <br>
+            <div id="cButtons">
+                <button id="item1" onclick="item1()">Use Bomb!</button>
+                <button id="item2" onclick="item2()">Use MedKit!</button>
+            </div>
+            <br>
+            <div id="mainButtons">
+                <button id="spawnAndAttack">Spawn Enemy!</button>
+                <button id="shopAndRetreat">Shop!</button>
+            </div>
+            <div id="equipmentBlock">
+                <h3 id="eDesc">Equipment/Pets</h3>
+                <div id="equipment">
+                    <div id=slot1>Empty: </div>
+                    <br>
+                    <div id=slot2>Empty: </div>
+                    <br>
+                    <div id=slot3>Empty: </div>
+                    <br>
+                    <div id=slot4>Empty: </div>
+                    <br>
+                    <div id=slot5>Empty: </div>
+                </div>
+            </div>
+        </div>
+        <div id="questBox">
+            <h1 id="questText">Active quest</h1>
+            <br>
+            <div id=quests>
+                <h3 id="checkQuest"></h3>
+                <h3 id=questTitle>None</h3>
+                <h4 id=questInfo></h4>
+                <h4 id=questObj1></h4>
+                <h4 id=questObj2></h4>
+                <h4 id=questObj3></h4>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="js/variables.js"></script>
+    <script src="js/callFunctions.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
